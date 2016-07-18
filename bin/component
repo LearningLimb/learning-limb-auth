@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+let argv = require('yargs').argv;
+
+// TODO task for generating an angular 2 component

@@ -1,0 +1,19 @@
+# OS X finder file
+.DS_Store
+
+# dependencies
+/node_modules
+
+# typescript definition files
+/typings
+
+# transpiled/bundled client code
+/dist
+
+# source-map files
+/src/client/**/*.js
+/src/client/**/*.map
+
+# log files
+/logs
+*.log
