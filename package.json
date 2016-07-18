@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "A quickstart project for angular 2, webpack, and express server",
   "scripts": {
-    "start": "if [[ $NPM_CONFIG_PRODUCTION ]]; then node bin/www; else webpack-dev-server --inline --progress --port 8080; fi",
+    "start": "./bin/start",
+    "www": "./bin/www",
+    "postinstall": "./bin/postinstall",
     "test": "karma start",
     "build": "rimraf dist && webpack --config build/webpack.prod.js --progress --profile --bail",
-    "postinstall": "typings install && if [[ $NPM_CONFIG_PRODUCTION ]]; then npm run build; fi"
+    "typings": "typings",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server"
   },
   "license": "MIT",
   "dependencies": {
@@ -34,6 +38,7 @@
     "reflect-metadata": "^0.1.3",
     "rimraf": "^2.5.2",
     "rxjs": "5.0.0-beta.6",
+    "shelljs": "^0.7.0",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.9",
