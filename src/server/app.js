@@ -1,50 +1,40 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var infoRoute = require('./routes/info');
+'use strict';
+let pkg = require('../../package.json');
 
-const DIST_PATH = path.join(__dirname, '../../dist');
+let express = require('express');
+let log = require('debug')(`${pkg.name}:app`);
+let logger = require('morgan');
+let cookieParser = require('cookie-parser');
+let bodyParser = require('body-parser');
+let infoRouter = require('./routes/info');
+let wwwRouter = require('./routes/www');
 
-var app = express();
+
+let app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use(cookieParser());
-app.use('/', express.static(DIST_PATH));
 
-app.use('/info', infoRoute);
-
-// catch 404s and return to /index.html
-app.use(function(req, res, next) {
-  res.sendFile(DIST_PATH + '/index.html');
-});
+app.use('/api/info', infoRouter);
+app.use(wwwRouter);
 
 // error handlers
 
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.json({
-      message: err.message,
-      error: err
+    app.use(function(err, req, res, next) {
+        res.status(err.status || 500);
+        res.json({
+            message: err.message,
+            error: err
+        });
+        log(err);
     });
-  });
 }
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
-
 
 module.exports = app;

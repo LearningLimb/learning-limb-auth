@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
+let root = require('@ddlees/module-root');
+let express = require('express');
+let router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.json(require('../../../package.json'));
+  res.json(root.require('package.json'));
 });
 
 module.exports = router;
