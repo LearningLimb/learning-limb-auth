@@ -8,7 +8,7 @@ let config = PRODUCTION ? root.require('build/webpack.prod') : root.require('web
 let router = express.Router();
 
 if (PRODUCTION) {
-    router.use('/assets', express.static(config.output.path));
+    router.use('/public', express.static(config.output.path));
 
     // catch 404s and return to /index.html
     router.use(function(req, res, next) {
