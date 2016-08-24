@@ -1,16 +1,10 @@
 import { Component }          from '@angular/core';
 import { ROUTER_DIRECTIVES }  from '@angular/router';
 
-import { HeroService }        from '../../services/hero';
-
 @Component({
-    selector: 'my-app',
+    selector: 'tour-of-heroes',
     template: require('./template.html'),
-    styles: [require('./styles.css')],
-    directives: [ROUTER_DIRECTIVES],
-    providers: [
-        HeroService,
-    ]
+    styles: [require('./styles.css')]
 })
 export class AppComponent {
     title = 'Tour of Heroes';

@@ -21,8 +21,7 @@ app.use(cookieParser());
 
 app.use('/api/info', infoRouter);
 app.use('/public', publicRouter);
-app.use('/app', spaRouter);
-app.get('/', (req, res) => res.redirect('/app'));
+app.get('/', spaRouter);
 
 // error handlers
 
