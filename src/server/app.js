@@ -21,7 +21,7 @@ app.use(cookieParser());
 
 app.use('/api/info', infoRouter);
 app.use('/public', publicRouter);
-app.get('/', spaRouter);
+app.use('/', spaRouter);
 
 // error handlers
 
