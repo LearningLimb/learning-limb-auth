@@ -1,14 +1,14 @@
 'use strict';
-let pkg = require('../../package.json');
-
-let express = require('express');
-let log = require('debug')(`${pkg.name}:app`);
-let logger = require('morgan');
-let cookieParser = require('cookie-parser');
-let bodyParser = require('body-parser');
-let infoRouter = require('./routes/info');
-let wwwRouter = require('./routes/www');
-
+const pkg = require('../../package.json');
+const express = require('express');
+const log = require('debug')(`${pkg.name}:app`);
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const Utils = require('./lib/utils');
+const infoRouter = require('./routes/info');
+const publicRouter = require('./routes/public');
+const spaRouter = require('./routes/spa');
 
 let app = express();
 
@@ -20,14 +20,16 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 
 app.use('/api/info', infoRouter);
-app.use(wwwRouter);
+app.use('/public', publicRouter);
+app.use('/app', spaRouter);
+app.get('/', (req, res) => res.redirect('/app'));
 
 // error handlers
 
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
+    app.use((err, req, res, next) => {
         res.status(err.status || 500);
         res.json({
             message: err.message,

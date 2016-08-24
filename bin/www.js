@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 'use strict';
 let root = require('@ddlees/module-root');
 let pkg = root.require('package.json');
@@ -6,11 +6,12 @@ let debug = require('debug')(`${pkg.name}:server`);
 let http = require('http');
 
 let app = root.require('src/server/app');
+const PORT = process.env.PORT || '3000';
 
 /**
  * Get port from environment and store in Express.
  */
-app.set('port', process.env.PORT || '3000');
+app.set('port', PORT);
 
 /**
  * Create HTTP server.
@@ -25,9 +26,9 @@ server.on('error', (error) => {
     throw error;
   }
 
-  let bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  let bind = typeof PORT === 'string'
+    ? 'Pipe ' + PORT
+    : 'Port ' + PORT;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {

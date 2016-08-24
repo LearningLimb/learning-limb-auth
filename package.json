@@ -8,7 +8,8 @@
     "test": "karma start",
     "build": "rimraf dist && webpack --config build/webpack.prod.js --progress --profile --bail",
     "typings": "typings",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "webpack-dashboard": "webpack-dashboard -- node bin/www"
   },
   "license": "MIT",
   "dependencies": {
@@ -44,6 +45,7 @@
     "typescript": "^1.8.9",
     "typings": "^1.0.4",
     "webpack": "^1.13.1",
+    "webpack-dashboard": "^0.1.8",
     "webpack-merge": "^0.9.0",
     "zone.js": "0.6.12"
   },
