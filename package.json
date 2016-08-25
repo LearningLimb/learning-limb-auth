@@ -4,13 +4,13 @@
   "repository": "ddlees/ng2-webpack-express-quickstart",
   "description": "A quickstart project for angular 2, webpack, and express server",
   "scripts": {
-    "start": "node bin/www",
+    "start": "if [ \"$NODE_ENV\" = \"production\" ]; then node bin/www.js; else nodemon --config nodemon.json bin/www.js; fi",
     "postinstall": "./bin/postinstall",
     "test": "karma start",
     "build": "rimraf dist && webpack --config build/webpack.prod.js --progress --profile --bail",
     "typings": "typings",
     "webpack": "webpack",
-    "webpack-dashboard": "webpack-dashboard -- node bin/www"
+    "webpack-dashboard": "webpack-dashboard -- npm start"
   },
   "license": "MIT",
   "dependencies": {
@@ -58,6 +58,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
+    "nodemon": "^1.10.2",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
     "yargs": "^4.8.0"

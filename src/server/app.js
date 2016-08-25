@@ -27,7 +27,7 @@ app.use('/', spaRouter);
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
+if (!Utils.isProduction) {
     app.use((err, req, res, next) => {
         res.status(err.status || 500);
         res.json({

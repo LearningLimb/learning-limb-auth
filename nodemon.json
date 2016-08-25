@@ -1,0 +1,15 @@
+{
+    "watch": [
+        "bin/www.js",
+        "src/server"
+    ],
+    "events": {
+        "restart": "$NOTIFY -subtitle 'Server restarted' -message \"File changed: $(basename $FILENAME)\"",
+        "crash": "$NOTIFY -subtitle 'Server crashed' -message ''",
+        "config:update": "$NOTIFY -subtitle 'Nodemon config updated' -message ''"
+    },
+    "env": {
+        "CONTENT_IMG_URL": "",
+        "NOTIFY": "terminal-notifier -title 'nodemon' -appIcon https://nodejs.org/static/images/logos/nodejs-new-white-pantone.png"
+    }
+}
