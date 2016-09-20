@@ -6,7 +6,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const Utils = require('./lib/utils');
-const infoRouter = require('./routes/info');
+const apiRouter = require('./routes/api');
 const publicRouter = require('./routes/public');
 const spaRouter = require('./routes/spa');
 
@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
-app.use('/api/info', infoRouter);
+app.use('/api', apiRouter);
 app.use('/public', publicRouter);
 app.use('/', spaRouter);
 

@@ -15,7 +15,7 @@ function inMemory(req, res) {
 
 let middleware = Utils.isProduction ? fs : inMemory;
 let router = express.Router();
-
+ 
 /**
  * Handle 404s and serve Single Page Application (SPA)
  */
