@@ -1,0 +1,14 @@
+#ll-button {
+  color: #fff;
+  border: 0.25rem solid #fff;
+  background-color: #f7292a;
+}
+
+#ll-button:hover {
+  background-color: #ff9b00;
+  color: #fff;
+}
+
+#ll-button:focus {
+  outline: 5px auto #ff9b00;;
+}

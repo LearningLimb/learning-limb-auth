@@ -1,10 +1,14 @@
-import { Component }          from '@angular/core';
+import { Component } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
-    selector: 'tour-of-heroes',
+    selector: 'learning-limb',
     template: require('./template.html'),
     styles: [require('./styles.css')]
 })
 export class AppComponent {
-    title = 'Tour of Heroes';
+
+    constructor(private title: Title){
+        this.title.setTitle('LearningLimb - Put Your Family In The Story!');
+    }
 }
