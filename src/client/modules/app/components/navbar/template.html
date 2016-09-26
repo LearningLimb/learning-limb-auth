@@ -9,18 +9,18 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-      <img id="brand-img" alt="Learning Limb" src="../../../../images/logo-2.png" />
+      <img class="visible-xs" alt="Learning Limb" src="../../../../images/logo-2.png" />
+      <img class="hidden-xs" alt="Learning Limb" src="../../../../images/logo-2.png" />
     </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse " id="ll-navbar-collapse-1">
-        <a><ll-button class="navbar-btn">Home</ll-button></a>
-        <a><ll-button class="navbar-btn">Our Books</ll-button></a>
-        <a><ll-button class="navbar-btn">About Us</ll-button></a>
-        <a><ll-button class="navbar-btn">Contact Us</ll-button></a>
-        <a><ll-button class="navbar-btn">Visit Shop</ll-button></a>
-        <a><ll-button class="navbar-btn">Cart <span class="glyphicon glyphicon-shopping-cart"></span></ll-button></a>
+        <a routerLink="/home"><ll-button class="navbar-btn">Home</ll-button></a>
+        <a routerLink="/books"><ll-button class="navbar-btn">Our Books</ll-button></a>
+        <a routerLink="/about"><ll-button class="navbar-btn">About Us</ll-button></a>
+        <a routerLink="/contact"><ll-button class="navbar-btn">Contact Us</ll-button></a>
+        <a routerLink="/cart"><ll-button class="navbar-btn">Cart <span class="glyphicon glyphicon-shopping-cart"></span></ll-button></a>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

@@ -1,5 +1,8 @@
-#brand-img {
+.hidden-xs {
   max-height: 10rem;
+}
+.visible-xs {
+  max-height: 7rem;
 }
 
 #cart-link {
