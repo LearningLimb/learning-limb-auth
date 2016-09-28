@@ -1,5 +1,8 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
+    <div id="top-bar" class="row header pull-right">
+      <a>Login</a>&nbsp;&nbsp;&nbsp;&nbsp;<a routerLink="/cart">Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    </div>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ll-navbar-collapse-1" aria-expanded="false">
@@ -9,18 +12,30 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-      <img class="visible-xs" alt="Learning Limb" src="../../../../images/logo-2.png" />
-      <img class="hidden-xs" alt="Learning Limb" src="../../../../images/logo-2.png" />
-    </a>
+        <img class="visible-xs" alt="Learning Limb" src="../../../../images/logo-2.png" />
+        <img class="hidden-xs" alt="Learning Limb" src="../../../../images/logo-2.png" />
+      </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse " id="ll-navbar-collapse-1">
-        <a routerLink="/home"><ll-button class="navbar-btn">Home</ll-button></a>
-        <a routerLink="/books"><ll-button class="navbar-btn">Our Books</ll-button></a>
-        <a routerLink="/about"><ll-button class="navbar-btn">About Us</ll-button></a>
-        <a routerLink="/contact"><ll-button class="navbar-btn">Contact Us</ll-button></a>
-        <a routerLink="/cart"><ll-button class="navbar-btn">Cart <span class="glyphicon glyphicon-shopping-cart"></span></ll-button></a>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+      <a routerLink="/home">
+        <ll-button class="navbar-btn">Home</ll-button>
+      </a>
+      <a routerLink="/books">
+        <ll-button class="navbar-btn">Our Books</ll-button>
+      </a>
+      <a routerLink="/about">
+        <ll-button class="navbar-btn">About Us</ll-button>
+      </a>
+      <a routerLink="/support">
+        <ll-button class="navbar-btn">Support</ll-button>
+      </a>
+      <!--<a routerLink="/cart">
+        <ll-button class="navbar-btn">Cart <span class="glyphicon glyphicon-shopping-cart"></span></ll-button>
+      </a>-->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>

@@ -14,5 +14,17 @@ export const routes = RouterModule.forRoot([
     {
         path: 'books',
         component: Components.BooksComponent
-    }
+    },
+    {
+        path: 'about',
+        component: Components.AboutComponent
+    },
+    {
+        path: 'support',
+        component: Components.SupportComponent
+    },
+    {
+        path: 'cart',
+        component: Components.CartComponent
+    },
 ]);

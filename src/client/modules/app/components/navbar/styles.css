@@ -4,7 +4,9 @@
 .visible-xs {
   max-height: 7rem;
 }
-
+#top-bar * {
+  color: #2a6f37;
+}
 #cart-link {
   color: #fff;
 }
@@ -12,7 +14,9 @@
   text-align: center;
   padding-top: 6rem;
 }
-
+.navbar {
+  padding: 1rem;
+}
 ll-button {
   margin-bottom: .25rem;
 }
