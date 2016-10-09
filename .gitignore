@@ -17,3 +17,6 @@
 # log files
 /logs
 *.log
+
+# environment variables files
+*.env
