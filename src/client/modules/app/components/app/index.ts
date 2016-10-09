@@ -4,7 +4,7 @@ import {Title} from '@angular/platform-browser';
 @Component({
     selector: 'learning-limb',
     template: require('./template.html'),
-    styles: [require('./styles.css')]
+    styles: [require('./styles.scss')]
 })
 export class AppComponent {
 

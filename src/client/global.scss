@@ -1,0 +1,18 @@
+$fa-font-path: "~font-awesome/fonts";
+$enable-rounded: true;
+$enable-shadows: true;
+@import '~bootstrap/scss/bootstrap-flex.scss';
+@import '~font-awesome/scss/font-awesome.scss';
+@font-face {
+    font-family: 'kb-stick-to-the-plan';
+    src: url('./default-font.woff');
+}
+
+body {
+    padding-top: 7rem;
+    background-image: url('./landscape-1200.jpg');
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    font-family: 'kb-stick-to-the-plan';
+}

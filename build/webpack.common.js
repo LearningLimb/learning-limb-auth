@@ -22,16 +22,16 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'html'
             }, {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file?name=assets/[name].[hash].[ext]'
             }, {
-                test: /\.css$/,
+                test: /\.scss$/,
                 include: `${SRC_PATH}/modules`,
-                loader: 'css-to-string-loader!css-loader'
+                loader: 'css-to-string-loader!css?sourceMap!sass?sourceMap'
             }, {
-                test: /\.css$/,
+                test: /\.scss$/,
                 exclude: `${SRC_PATH}/modules`,
-                loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+                loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
             }]
     },
     plugins: [
@@ -47,7 +47,9 @@ module.exports = {
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
-            jquery: 'jquery'
+            jquery: 'jquery',
+            Tether: 'tether',
+            'window.Tether': 'tether'
         })
     ]
 };

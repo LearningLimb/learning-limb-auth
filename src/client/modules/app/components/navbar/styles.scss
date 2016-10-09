@@ -1,0 +1,58 @@
+:host {
+    * {
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    }
+    .navbar-default {
+        background-color: #fcd603;
+        box-shadow: 0px 0px 0.5rem black;
+        border-radius: 0 0 1rem 1rem;
+    }
+    .navbar-brand {
+        padding: 0;
+        img {
+            width: 12rem;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 5rem;
+            line-height: 5rem;
+        }
+    }
+    .dropdown-menu {
+        width: auto;
+        line-height: 1.5rem;
+        background-color: #f7292a;
+        border: 0.25rem solid #fff;
+        border-radius: 20px;
+        background-color: #f7292a;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+        #signin-form {
+            padding-top: 1rem;
+            input {
+                color: #000;
+                text-shadow: none;
+                font-weight: normal;
+            }
+            button {
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+            }
+            .remember-me-row {
+                padding-top: 0.5rem;
+            }
+            a:hover {
+                color: #76c0ff;
+            }
+        }
+        .dropdown-item {
+            background: none;
+            height: 3rem;
+        }
+        .social-login {
+            text-shadow: none;
+        }
+    }
+}
