@@ -1,9 +1,0 @@
-#!/usr/bin/env node
-
-require('shelljs/global');
-
-exec('npm run typings install');
-
-if (process.env.NPM_CONFIG_PRODUCTION) {
-    exec('npm run build');
-}

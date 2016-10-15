@@ -20,3 +20,6 @@
 
 # environment variables files
 *.env
+
+# temp data
+/tmp

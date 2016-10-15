@@ -1,9 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { AuthService } from '../../../shared';
 
 @Component({
     selector: 'navbar',
     template: require('./template.html'),
     styles: [require('./styles.scss')]
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
+    userName;
+    
+    constructor(private auth: AuthService, private zone: NgZone){}
+
+    ngOnInit() {
+        if (window.location.hash === '#_=_') {
+            window.location.hash = '';
+        }
+        
+        this.auth.isAuthenticated().subscribe(user => this.zone.run(() => {
+            this.userName = user.name.givenName;
+        }));
+    }
 }

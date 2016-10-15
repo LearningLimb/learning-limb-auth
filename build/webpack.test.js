@@ -9,7 +9,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['ts']
+        loader: 'awesome-typescript-loader'
       },
       {
         test: /\.html$/,
