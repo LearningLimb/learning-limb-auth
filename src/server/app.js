@@ -17,6 +17,7 @@ const auth = require('./lib/auth');
 
 let app = express();
 
+app.enable("trust proxy");
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
