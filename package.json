@@ -5,7 +5,7 @@
   "description": "The main app for Learning Limb",
   "scripts": {
     "start": "./bin/start.js",
-    "postinstall": "./bin/postinstall",
+    "postinstall": "./bin/postinstall.js",
     "test": "karma start",
     "build": "rimraf dist && webpack --config build/webpack.prod.js --progress --profile --bail",
     "typings": "typings",
