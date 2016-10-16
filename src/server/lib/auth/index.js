@@ -1,10 +1,15 @@
 const passport = require('passport');
 const Utils = require('../utils');
-const facebook = require('./facebook');
 const User = require('../db/user');
+const facebook = require('./facebook');
+const google = require('./google');
 
 if (Utils.isFacebookAuthEnabled) {
   passport.use(facebook);
+}
+
+if (Utils.isGoogleAuthEnabled) {
+  passport.use(google);
 }
 
 passport.serializeUser(function(user, done) {
