@@ -1,6 +1,7 @@
 $fa-font-path: "~font-awesome/fonts";
 $enable-rounded: true;
 $enable-shadows: true;
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 @import '~bootstrap/scss/bootstrap-flex.scss';
 @import '~font-awesome/scss/font-awesome.scss';
 @font-face {
@@ -13,5 +14,5 @@ body {
     background-image: url('./landscape-1200.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-family: 'kb-stick-to-the-plan';
+    font-family: 'Poppins', 'kb-stick-to-the-plan', sans-serif;
 }
