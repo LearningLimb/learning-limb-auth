@@ -4,8 +4,8 @@
   "repository": "LearningLimb/learning-limb-website",
   "description": "The main app for Learning Limb",
   "scripts": {
-    "start": "./bin/start.js",
-    "postinstall": "./bin/postinstall.js",
+    "start": "node ./bin/start.js",
+    "postinstall": "node ./bin/postinstall.js",
     "test": "karma start",
     "build": "rimraf dist && webpack --config build/webpack.prod.js --progress --profile --bail",
     "typings": "typings",
