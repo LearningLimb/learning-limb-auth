@@ -4,5 +4,6 @@ export * from './books';
 export * from './cart';
 export * from './home';
 export * from './navbar';
+export * from './signup';
 export * from './support';
 

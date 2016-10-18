@@ -27,4 +27,8 @@ export const routes = RouterModule.forRoot([
         path: 'cart',
         component: Components.CartComponent
     },
+    {
+        path: 'signup',
+        component: Components.SignupComponent
+    },
 ]);
