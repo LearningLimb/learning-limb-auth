@@ -18,6 +18,6 @@ export class NavBarComponent implements OnInit {
         
         this.auth.isAuthenticated().subscribe(user => this.zone.run(() => {
             this.userName = user.name.givenName;
-        }));
+        }), (err) => console.log('Failed to authenticate user'));
     }
 }
