@@ -1,20 +1,39 @@
 <div class="container">
   <div class="row flex-items-xs-center">
-    <ll-jumbotron color="#f7292a" class="col-sm-8 container">
-      <form>
-        <div class="form-group row">
-          <label for="email-input" class="col-sm-1 col-form-label"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></label>
-          <input type="email" class="form-control col-sm-8" id="email-input" aria-describedby="email-help" placeholder="Enter email" required>
-          <small id="email-help" class="form-text offset-sm-1 col-sm-11">Don't worry, we'll never share your info.</small>
-        </div>
+    <ll-jumbotron color="#f7292a" class="col-sm-8">
+      <h2 class="text-xs-center">Sign up</h2>
+      <div class="container">
+        <form #userForm="ngForm" role="form" (ngSubmit)="onSubmit()">
+          <div class="form-group row">
+            <label for="firstName" class="col-sm-1 col-form-label hidden-sm-down"><i class="fa fa-user fa-lg" aria-hidden="true"></i></label>
+            <div class="col-sm-11">
+              <input type="text" class="form-control" id="first-name-input" placeholder="First Name" required [(ngModel)]="user.name.givenName" name="firstName">
+              <input type="text" class="form-control" id="last-name-input" placeholder="Last Name" required [(ngModel)]="user.name.familyName" name="lastName">
+            </div>
+          </div>
 
-        <div class="form-group row">
-          <label for="first-name-input" class="col-sm-1 col-form-label"><i class="fa fa-user fa-lg" aria-hidden="true"></i></label>
-          <input type="text" class="form-control col-sm-8" id="first-name-input" placeholder="First Name" required>
-          <input type="text" class="form-control col-sm-8 offset-sm-1" id="first-name-input" placeholder="Last Name" required>
-        </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-1 col-form-label hidden-sm-down"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></label>
+            <div class="col-sm-11">
+              <input type="email" class="form-control" placeholder="Enter email" required [(ngModel)]="user.local.email" name="email">
+            </div>
+          </div>
 
-      </form>
+          <div class="form-group row">
+            <label for="password" class="col-sm-1 col-form-label hidden-sm-down"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i></label>
+            <div class="col-sm-11">
+              <input type="password" class="form-control" id="password" placeholder="Password" required [(ngModel)]="user.local.password" name="password">
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required name="confirmPassword">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="offset-sm-8 col-sm-3">
+              <ll-button color="#00a1ee" type="submit" [disabled]="!userForm.form.valid">Sign me up!</ll-button>
+            </div>
+          </div>
+        </form>
+      </div>
     </ll-jumbotron>
   </div>
 </div>

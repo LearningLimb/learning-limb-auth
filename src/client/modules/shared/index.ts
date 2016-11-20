@@ -24,4 +24,4 @@ export class SharedModule {
 }
 
 export * from './services';
-// export * from './models';
+export * from './models';

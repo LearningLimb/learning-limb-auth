@@ -1,6 +1,8 @@
-:host * {
-    color: #fff;
-    text-shadow: 1px 1px #000;
+:host {
+    * {
+        color: #fff;
+        text-shadow: 1px 1px #000;
+    }
 
     input {
         color: #000;

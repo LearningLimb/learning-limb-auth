@@ -3,6 +3,11 @@ const Utils = require('../utils');
 const User = require('../db/user');
 const facebook = require('./facebook');
 const google = require('./google');
+const localLogin = require('./local-login');
+const localSignup = require('./local-signup');
+
+passport.use('local-signup', localSignup);
+passport.use('local-login', localLogin);
 
 if (Utils.isFacebookAuthEnabled) {
   passport.use(facebook);

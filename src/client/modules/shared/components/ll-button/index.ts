@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'll-button',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
     styles: [require('./styles.scss')]
 })
 export class ButtonComponent {
+    @Input() color: string = '#f7292a';
+    @Input() type: string;
 }

@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+const flash = require('connect-flash');
 const Utils = require('./lib/utils');
 const apiRouter = require('./routes/api');
 const publicRouter = require('./routes/public');
@@ -30,6 +31,7 @@ app.use(session({
 }));
 app.use(auth.initialize());
 app.use(auth.session());
+app.use(flash());
 app.use(cookieParser());
 
 app.use('/auth', authRouter);
