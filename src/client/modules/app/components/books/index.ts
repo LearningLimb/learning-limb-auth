@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
     styles: [require('./styles.scss')]
 })
 export class BooksComponent {
+    books: string[] = ['a', 'b', 'c', 'd', 'e'];
 }

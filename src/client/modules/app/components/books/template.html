@@ -1,7 +1,9 @@
 <div class="container">
     <div class="row">
-        <ll-card id="boys" color="#00a1ef" class="col-xs-12 col-md-6 books">
-            <img class='img-fluid' src="../../../../images/sample_cover.png"/>
-        </ll-card>
+        <div *ngFor="let book of books">
+            <ll-card id="boys" color="#00a1ef" class="col-xs-12 col-md-6 books">
+                <img class='img-fluid' src="../../../../images/sample_cover.png" />
+            </ll-card>
+        </div>
     </div>
 </div>
