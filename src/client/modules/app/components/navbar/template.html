@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top navbar-default">
+<nav class="navbar">
   <!-- Brand and toggle get grouped for better mobile display -->
   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
     ☰
@@ -14,19 +14,18 @@
         <ll-button>Home</ll-button>
       </a>
       <a class='nav-item nav-link' routerLink="/books">
-        <ll-button>Our Books</ll-button>
+        <ll-button color="#00a1ee">Our Books</ll-button>
       </a>
       <a class='nav-item nav-link' routerLink="/about">
-        <ll-button>About Us</ll-button>
+        <ll-button color="#67df4e">About Us</ll-button>
       </a>
       <a class='nav-item nav-link' routerLink="/support">
-        <ll-button>Support</ll-button>
+        <ll-button color="#ff9b00">Support</ll-button>
       </a>
       <div class='btn-group pull-right'>
         <div *ngIf="userName" class="d-inline nav-item nav-link dropdown">
-          <a class="btn btn-link dropdown-toggle" id="accountMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Hi {{ userName }}!
-          </a>
+          <ll-button class="dropdown-toggle" id="accountMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+            color="#ed008c">Hi {{ userName }}!</ll-button>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountMenuLink">
             <div class="container p-t-1">
               <a class='dropdown-item' href="#">My account</a>
@@ -37,10 +36,12 @@
         <div *ngIf="!userName" class="d-inline nav-item nav-link dropdown">
           <!-- Button login modal trigger -->
           <a class="btn btn-link" id="loginMenuLink" data-toggle="modal" data-target="#loginModal">
-            Login
+            <ll-button color="#ed008c"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</ll-button>
           </a>
         </div>
-        <a class='nav-item nav-link' routerLink="/cart">(0)&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a class='nav-item nav-link ml-0' routerLink="/cart">
+          <ll-button color="#5b3587"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart (0)</ll-button>
+        </a>
       </div>
     </div>
   </div>

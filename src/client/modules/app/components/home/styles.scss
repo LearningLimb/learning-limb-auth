@@ -1,5 +1,43 @@
 :host * {
   color: #fff;
-  text-shadow: 1px 1px #000;
+}
+
+ll-jumbotron {
+  position: relative;
+}
+
+.step-emblem {
+  position: absolute;
+  top: -.5rem;
+  left: 0;
+  color: lightslategray;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 4.25rem;
+}
+
+.step-1-book {
+  display: inline-block;
+  width: 6.375rem;
+}
+#books-container {
+  margin-top: 2.25rem;
+}
+
+#book-1 {
+  transform: rotate(-30deg)
+}
+
+#book-2 {
+  transform: rotate(-4deg)
+}
+
+#book-3 {
+  transform: rotate(25deg)
 }
 
