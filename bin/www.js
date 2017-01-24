@@ -5,7 +5,7 @@ let pkg = root.require('package.json');
 let debug = require('debug')(`${pkg.name}:server`);
 let http = require('http');
 
-let app = root.require('src/server/app');
+let app = root.require('src/app');
 const PORT = process.env.PORT || '3000';
 
 /**

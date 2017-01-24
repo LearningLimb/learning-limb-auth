@@ -1,6 +1,6 @@
-# LearningLimb website
+# LearningLimb Auth service
 
-This is the main website for LearningLimb.
+This is the authentication/authorization & identity service for LearningLimb.
 
 ## Getting started
 
@@ -10,7 +10,7 @@ This is the main website for LearningLimb.
     - Install your favorite editor - [Visual Studio Code](https://code.visualstudio.com) preferred
   - **Clone this repository**
     - Command Line
-      - `git clone https://github.com/LearningLimb/learning-limb-website.git`
+      - `git clone https://github.com/LearningLimb/learning-limb-auth.git`
     - GitHub Desktop
       - Sign in to GitHub and GitHub Desktop before you start to clone.
       - On GitHub, navigate to the main page of the repository.
@@ -30,7 +30,7 @@ This is the main website for LearningLimb.
     - Open a Terminal/Command prompt
       - Windows: `cmd`
     - Enter `cd <path-to-project>`
-      - E.g. `cd C:\Users\John\Documents\Github\learning-limb-website`
+      - E.g. `cd C:\Users\John\Documents\Github\learning-limb-auth`
   - **Install dependencies**
     - In the terminal run `npm install`
   - **Obtain a development.env file**
