@@ -6,8 +6,8 @@ const auth = require('../../lib/auth');
 router.get('/', auth.authenticate('google', {scope: 'profile'}));
 
 router.get('/callback', auth.authenticate('google', {
-    successRedirect: '/home',
-    failureRedirect: '/login'
+    successRedirect: `${process.env.REDIRECT_HOST}/home`,
+    failureRedirect: `${process.env.REDIRECT_HOST}/login`
 }));
 
 module.exports = router;
