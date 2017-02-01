@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
+const cors = require('cors');
 const Utils = require('./lib/utils');
 const db = require('./lib/db');
 const auth = require('./lib/auth');
@@ -16,6 +17,7 @@ const routes = require('./routes');
 let app = express();
 
 app.enable("trust proxy");
+app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
